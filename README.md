@@ -1,2 +1,2 @@
 # garfield
-Si4462 Usb gateway
+Si4462 usb gateway
