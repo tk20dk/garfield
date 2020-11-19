@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name garfield)(type KiCad)(uri ${KIPRJMOD}/garfield.pretty)(options "")(descr ""))
+)
