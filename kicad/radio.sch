@@ -1,0 +1,315 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title "Garfield"
+Date "2018-09-09"
+Rev "v1.0"
+Comp "www.2-0.dk"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 6250 2950 2    50   Output ~ 0
+spi_miso
+Text GLabel 6250 4250 2    50   Output ~ 0
+spi_miso
+Text GLabel 6250 3050 2    50   Input ~ 0
+spi_mosi
+Text GLabel 6250 4350 2    50   Input ~ 0
+spi_mosi
+Text GLabel 6250 3150 2    50   Input ~ 0
+spi_sck
+Text GLabel 6250 4450 2    50   Input ~ 0
+spi_sck
+Text GLabel 6250 3250 2    50   Input ~ 0
+cs_radio433
+Text GLabel 6250 4550 2    50   Input ~ 0
+cs_radio868
+Text GLabel 6250 3350 2    50   Output ~ 0
+irq_radio433
+Text GLabel 6250 4650 2    50   Output ~ 0
+irq_radio868
+Wire Wire Line
+	5250 4850 5350 4850
+Wire Wire Line
+	5250 3550 5350 3550
+$Comp
+L power:+3V3 #PWR021
+U 1 1 5B49272C
+P 5350 2950
+F 0 "#PWR021" H 5350 2800 50  0001 C CNN
+F 1 "+3V3" V 5365 3078 50  0000 L CNN
+F 2 "" H 5350 2950 50  0001 C CNN
+F 3 "" H 5350 2950 50  0001 C CNN
+	1    5350 2950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR022
+U 1 1 5B49276D
+P 5350 3150
+F 0 "#PWR022" H 5350 2900 50  0001 C CNN
+F 1 "GND" V 5355 3022 50  0000 R CNN
+F 2 "" H 5350 3150 50  0001 C CNN
+F 3 "" H 5350 3150 50  0001 C CNN
+	1    5350 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5350 3150 5350 3050
+$Comp
+L power:+3V3 #PWR023
+U 1 1 5B492929
+P 5350 4250
+F 0 "#PWR023" H 5350 4100 50  0001 C CNN
+F 1 "+3V3" V 5365 4378 50  0000 L CNN
+F 2 "" H 5350 4250 50  0001 C CNN
+F 3 "" H 5350 4250 50  0001 C CNN
+	1    5350 4250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR024
+U 1 1 5B49296A
+P 5350 4450
+F 0 "#PWR024" H 5350 4200 50  0001 C CNN
+F 1 "GND" V 5355 4322 50  0000 R CNN
+F 2 "" H 5350 4450 50  0001 C CNN
+F 3 "" H 5350 4450 50  0001 C CNN
+	1    5350 4450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5350 4350 5350 4450
+Text GLabel 6250 4850 2    50   BiDi ~ 0
+gpio0_radio868
+Text GLabel 6250 4950 2    50   BiDi ~ 0
+gpio1_radio868
+Text GLabel 6250 3550 2    50   BiDi ~ 0
+gpio0_radio433
+Text GLabel 6250 3650 2    50   BiDi ~ 0
+gpio1_radio433
+$Comp
+L power:GND #PWR?
+U 1 1 5B66E221
+P 3550 4300
+AR Path="/5B48B53E/5B66E221" Ref="#PWR?"  Part="1" 
+AR Path="/5B48B545/5B66E221" Ref="#PWR018"  Part="1" 
+F 0 "#PWR018" H 3550 4050 50  0001 C CNN
+F 1 "GND" V 3555 4172 50  0000 R CNN
+F 2 "" H 3550 4300 50  0001 C CNN
+F 3 "" H 3550 4300 50  0001 C CNN
+	1    3550 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B66E227
+P 3050 4300
+AR Path="/5B48B53E/5B66E227" Ref="#PWR?"  Part="1" 
+AR Path="/5B48B545/5B66E227" Ref="#PWR017"  Part="1" 
+F 0 "#PWR017" H 3050 4050 50  0001 C CNN
+F 1 "GND" V 3055 4172 50  0000 R CNN
+F 2 "" H 3050 4300 50  0001 C CNN
+F 3 "" H 3050 4300 50  0001 C CNN
+	1    3050 4300
+	0    1    1    0   
+$EndComp
+Text GLabel 3550 4500 2    50   Output ~ 0
+swclk
+Text GLabel 3550 4400 2    50   BiDi ~ 0
+swdio
+Text GLabel 3050 4500 0    50   Output ~ 0
+uart_rx
+Text GLabel 3050 4400 0    50   Input ~ 0
+uart_tx
+$Comp
+L Device:C C8
+U 1 1 5B7B09E7
+P 3050 3150
+F 0 "C8" H 3165 3196 50  0000 L CNN
+F 1 "1u" H 3165 3105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3088 3000 50  0001 C CNN
+F 3 "~" H 3050 3150 50  0001 C CNN
+	1    3050 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 5B7B0AA3
+P 3400 3150
+F 0 "C9" H 3515 3196 50  0000 L CNN
+F 1 "1u" H 3515 3105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3438 3000 50  0001 C CNN
+F 3 "~" H 3400 3150 50  0001 C CNN
+	1    3400 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR028
+U 1 1 5B7B0B84
+P 3400 3300
+F 0 "#PWR028" H 3400 3050 50  0001 C CNN
+F 1 "GND" H 3405 3127 50  0000 C CNN
+F 2 "" H 3400 3300 50  0001 C CNN
+F 3 "" H 3400 3300 50  0001 C CNN
+	1    3400 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5B7B0BC0
+P 3050 3300
+F 0 "#PWR020" H 3050 3050 50  0001 C CNN
+F 1 "GND" H 3055 3127 50  0000 C CNN
+F 2 "" H 3050 3300 50  0001 C CNN
+F 3 "" H 3050 3300 50  0001 C CNN
+	1    3050 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR029
+U 1 1 5B7B0BF6
+P 5050 3750
+F 0 "#PWR029" H 5050 3500 50  0001 C CNN
+F 1 "GND" H 5055 3577 50  0000 C CNN
+F 2 "" H 5050 3750 50  0001 C CNN
+F 3 "" H 5050 3750 50  0001 C CNN
+	1    5050 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR030
+U 1 1 5B7B0C25
+P 5050 5050
+F 0 "#PWR030" H 5050 4800 50  0001 C CNN
+F 1 "GND" H 5055 4877 50  0000 C CNN
+F 2 "" H 5050 5050 50  0001 C CNN
+F 3 "" H 5050 5050 50  0001 C CNN
+	1    5050 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR019
+U 1 1 5B7B0CF6
+P 3050 3000
+F 0 "#PWR019" H 3050 2850 50  0001 C CNN
+F 1 "+3.3V" H 3065 3173 50  0000 C CNN
+F 2 "" H 3050 3000 50  0001 C CNN
+F 3 "" H 3050 3000 50  0001 C CNN
+	1    3050 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR027
+U 1 1 5B7B0D16
+P 3400 3000
+F 0 "#PWR027" H 3400 2850 50  0001 C CNN
+F 1 "+3.3V" H 3415 3173 50  0000 C CNN
+F 2 "" H 3400 3000 50  0001 C CNN
+F 3 "" H 3400 3000 50  0001 C CNN
+	1    3400 3000
+	1    0    0    -1  
+$EndComp
+Text GLabel 6250 4750 2    50   Input ~ 0
+sdn_radio868
+Text GLabel 6250 3450 2    50   Input ~ 0
+sdn_radio433
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J2
+U 1 1 5B9562A5
+P 3250 4300
+F 0 "J2" H 3300 4617 50  0000 C CNN
+F 1 "Debug" H 3300 4526 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 3250 4300 50  0001 C CNN
+F 3 "~" H 3250 4300 50  0001 C CNN
+	1    3250 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR025
+U 1 1 5B95637D
+P 3050 4200
+F 0 "#PWR025" H 3050 4050 50  0001 C CNN
+F 1 "+3V3" V 3065 4328 50  0000 L CNN
+F 2 "" H 3050 4200 50  0001 C CNN
+F 3 "" H 3050 4200 50  0001 C CNN
+	1    3050 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR026
+U 1 1 5B9563CE
+P 3550 4200
+F 0 "#PWR026" H 3550 4050 50  0001 C CNN
+F 1 "+3V3" V 3565 4328 50  0000 L CNN
+F 2 "" H 3550 4200 50  0001 C CNN
+F 3 "" H 3550 4200 50  0001 C CNN
+	1    3550 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_Coaxial ANT1
+U 1 1 5FAD2049
+P 5050 3550
+F 0 "ANT1" H 4978 3788 50  0000 C CNN
+F 1 "SMA 433MHz" H 4978 3697 50  0000 C CNN
+F 2 "garfield:SMA_Molex_73251-2200_Horizontal" H 5050 3550 50  0001 C CNN
+F 3 " ~" H 5050 3550 50  0001 C CNN
+	1    5050 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial ANT2
+U 1 1 5FAD7DA5
+P 5050 4850
+F 0 "ANT2" H 4978 5088 50  0000 C CNN
+F 1 "SMA 868MHz" H 4978 4997 50  0000 C CNN
+F 2 "garfield:SMA_Molex_73251-2200_Horizontal" H 5050 4850 50  0001 C CNN
+F 3 " ~" H 5050 4850 50  0001 C CNN
+	1    5050 4850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3650 5200 3750
+Wire Wire Line
+	5200 3750 5050 3750
+Wire Wire Line
+	5200 3650 5350 3650
+Connection ~ 5050 3750
+Wire Wire Line
+	5200 4950 5200 5050
+Wire Wire Line
+	5200 5050 5050 5050
+Wire Wire Line
+	5200 4950 5350 4950
+Connection ~ 5050 5050
+$Comp
+L garfield:RF4463PRO-443 U4
+U 1 1 5FAA759A
+P 5800 3300
+F 0 "U4" H 5800 3915 50  0000 C CNN
+F 1 "RF4463PRO-443" H 5800 3824 50  0000 C CNN
+F 2 "garfield:RF4462PRO" H 5800 3250 50  0001 C CNN
+F 3 "" H 5800 3250 50  0001 C CNN
+	1    5800 3300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5350 3150
+$Comp
+L garfield:RF4463PRO-868 U5
+U 1 1 5FAAA702
+P 5800 4600
+F 0 "U5" H 5800 5215 50  0000 C CNN
+F 1 "RF4463PRO-868" H 5800 5124 50  0000 C CNN
+F 2 "garfield:RF4462PRO" H 5800 4550 50  0001 C CNN
+F 3 "" H 5800 4550 50  0001 C CNN
+	1    5800 4600
+	1    0    0    -1  
+$EndComp
+Connection ~ 5350 4450
+$EndSCHEMATC

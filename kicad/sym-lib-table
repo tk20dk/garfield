@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name garfield-rescue)(type Legacy)(uri ${KIPRJMOD}/garfield-rescue.lib)(options "")(descr ""))
+  (lib (name garfield)(type Legacy)(uri ${KIPRJMOD}/garfield.lib)(options "")(descr ""))
+)
